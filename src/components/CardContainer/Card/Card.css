@@ -1,0 +1,24 @@
+.img-wrapper {
+    overflow: hidden;
+}
+
+.img-holder {
+    width: 100%;
+	height: 100%;
+    transition: all .5s;
+    overflow: hidden;
+}
+
+.img-wrapper:hover .img-holder,
+.img-wrapper:focus .img-holder {
+    transform: scale(1.05);
+}
+
+.red-background {
+    background-color: red;
+}
+
+.tag-holder {
+    top: 10%;
+    right: 5%;
+}
