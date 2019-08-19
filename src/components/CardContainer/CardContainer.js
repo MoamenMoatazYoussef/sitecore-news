@@ -16,14 +16,14 @@ const dummyDataList = [
     title: "Welcome to where time stands still",
     date: "May 29 2018",
     src: dummyPhoto,
-    tags: ['News', '2018']
+    tags: ["News", "2018"]
   },
   {
     id: 1,
     title: "No one leaves and no one will",
     date: "May 29 2018",
     src: dummyPhoto,
-    tags: ['News', '2018']
+    tags: ["News", "2018"]
   },
 
   {
@@ -31,14 +31,14 @@ const dummyDataList = [
     title: "Moon is full, never seems to change",
     date: "May 29 2018",
     src: dummyPhoto,
-    tags: ['News', '2018', 'Events']
+    tags: ["News", "2018", "Events"]
   },
   {
     id: 4,
     title: "Just labeled mentally deranged",
     date: "May 29 2018",
     src: dummyPhoto,
-    tags: ['News', '2018']
+    tags: ["News", "2018"]
   },
 
   {
@@ -46,14 +46,14 @@ const dummyDataList = [
     title: "Dream the same thing every night",
     date: "May 29 2018",
     src: dummyPhoto,
-    tags: ['News', '2018','2019']
+    tags: ["News", "2018", "2019"]
   },
   {
     id: 6,
     title: "I see our freedom in my sight",
     date: "May 29 2018",
     src: dummyPhoto,
-    tags: ['News', '2018']
+    tags: ["News", "2018"]
   },
 
   {
@@ -61,14 +61,14 @@ const dummyDataList = [
     title: "No locked doors, no windows barred",
     date: "May 29 2018",
     src: dummyPhoto,
-    tags: ['News', '2018']
+    tags: ["News", "2018"]
   },
   {
     id: 8,
     title: "No things to make my brain seem scarred",
     date: "May 29 2018",
     src: dummyPhoto,
-    tags: ['News', '2018']
+    tags: ["News", "2018"]
   },
 
   {
@@ -76,14 +76,14 @@ const dummyDataList = [
     title: "Sleep my friend and you will see",
     date: "May 29 2018",
     src: dummyPhoto,
-    tags: ['News', '2018']
+    tags: ["News", "2018"]
   },
   {
     id: 10,
     title: "The dream is my reality",
     date: "May 29 2018",
     src: dummyPhoto,
-    tags: ['News', '2018']
+    tags: ["News", "2018"]
   },
 
   {
@@ -91,45 +91,75 @@ const dummyDataList = [
     title: "They keep us locked up in this cage",
     date: "May 29 2018",
     src: dummyPhoto,
-    tags: ['News', '2018']
+    tags: ["News", "2018"]
   },
   {
     id: 12,
     title: "Can't they see this is why my brain says 'rage'",
     date: "May 29 2018",
     src: dummyPhoto,
-    tags: ['News', '2018']
+    tags: ["News", "2018"]
   }
 ];
-const dummyFilters = ['News', '2019', 'Events', '2018'];
+const dummyFilters = ["News", "2019", "Events", "2018"];
 
 class CardContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      dataList: dummyDataList,    //TODO: should be []
+      dataList: dummyDataList, //TODO: should be []
       displayList: dummyDataList, //TODO: should be []
-      filters: dummyFilters,      //TODO: should be []
-      isLoading: false,
+      filters: dummyFilters, //TODO: should be []
+      isLoading: false
       // currentFilter: null      //TODO: probably will need this
     };
 
     this.onFilterClick = this.onFilterClick.bind(this);
+    this.onLoadMoreClick = this.onLoadMoreClick.bind(this);
   }
 
   onFilterClick(filter) {
     let { dataList } = this.state;
-    let condition = (item) => item.tags.includes(filter);
+    let condition = item => item.tags.includes(filter);
 
     this.setState({
-      displayList: filter !== 'none' ? dataList.filter(condition) : dataList,
+      displayList: filter !== "none" ? dataList.filter(condition) : dataList
       // currentFilter: filter
+    });
+  }
+
+  async onLoadMoreClick() {
+    //TODO: fetch data here
+    this.setState({
+      isLoading: true
+    });
+
+    /**
+     * The following code is a simulated fetch to demonstrate if the button Load More is working
+     * This will be removed later and replaced with fetch API from Sitecore or a data source
+     */
+    let { dataList } = this.state;
+    let displayList = dataList.slice(0, this.state.displayList.length + 3);
+
+    function sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
+    
+    await sleep(500); //This is here to simulate if button turns to LoadingButton when loading
+    /**
+     * End of simulation code
+     */
+
+    this.setState({
+      isLoading: false,
+      displayList
     });
   }
 
   componentDidMount() {
     this.setState({
-      isLoading: false
+      isLoading: false,
+      displayList: this.state.dataList.slice(0, 3)
     });
   }
 
@@ -153,7 +183,7 @@ class CardContainer extends Component {
         <div className="d-flex justify-content-center">
           <LoadButtonWithLoading
             isLoading={isLoading}
-            onClick={() => ''}
+            onClick={this.onLoadMoreClick}
           />
         </div>
       </Container>
