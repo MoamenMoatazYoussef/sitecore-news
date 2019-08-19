@@ -103,23 +103,6 @@ const dummyDataList = [
 ];
 const dummyFilters = ["News", "2019", "Events", "2018"];
 
-/**
- * TODO list:
- *  TODO 1) Header: 
- *    a)fixed position when scrolling up. 
- *    b) navigation 
- *    c) menus of navigation
- *    d) search modal
- *    e) scroll up button
- *    f) styling
- * 
- *  TODO 2) CardList:
- *    a) card styling
- *    b) card animation when mounting and unmounting
- * 
- *  TODO 3) Footer: all of it
- */
-
 class CardContainer extends Component {
   constructor(props) {
     super(props);
@@ -146,11 +129,11 @@ class CardContainer extends Component {
   }
 
   async onLoadMoreClick() {
+    //TODO: fetch data here
     this.setState({
       isLoading: true
     });
 
-    //TODO: fetch data here
     /**
      * The following code is a simulated fetch to demonstrate if the button Load More is working
      * This will be removed later and replaced with fetch API from Sitecore or a data source
@@ -161,7 +144,7 @@ class CardContainer extends Component {
     function sleep(ms) {
       return new Promise(resolve => setTimeout(resolve, ms));
     }
-
+    
     await sleep(500); //This is here to simulate if button turns to LoadingButton when loading
     /**
      * End of simulation code
