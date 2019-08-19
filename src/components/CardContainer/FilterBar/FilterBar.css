@@ -1,0 +1,9 @@
+.filter-selector {
+    color: gray;
+    transition: all .5s;
+    font-size: 12px;
+}
+
+.filter-selector:hover {
+    color: lightgray;
+}

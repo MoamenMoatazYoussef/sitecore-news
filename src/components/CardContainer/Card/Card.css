@@ -15,10 +15,14 @@
 }
 
 .red-background {
-    background-color: red;
+    background-color: #cc0000;
 }
 
 .tag-holder {
     top: 10%;
     right: 5%;
+}
+
+.tag {
+    font-size: 14px;
 }

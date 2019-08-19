@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import { Container, Row } from "react-bootstrap";
 
 import Card from "./Card/Card";
-import { LoadButton, LoadingButton } from "./LoadButton/LoadButton.js";
+import FilterBar from "./FilterBar/FilterBar";
+import { LoadButton, LoadingButton } from "./LoadButton/LoadButton";
 import { withLoading } from "../../constants/hoc";
 
 import dummyPhoto from "../../resources/dummy.jpeg";
@@ -100,14 +101,30 @@ const dummyDataList = [
     tags: ['News', '2018']
   }
 ];
+const dummyFilters = ['News', '2019', 'Events', '2018'];
 
 class CardContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      dataList: dummyDataList,
-      isLoading: false
+      dataList: dummyDataList,    //TODO: should be []
+      displayList: dummyDataList, //TODO: should be []
+      filters: dummyFilters,      //TODO: should be []
+      isLoading: false,
+      // currentFilter: null      //TODO: probably will need this
     };
+
+    this.onFilterClick = this.onFilterClick.bind(this);
+  }
+
+  onFilterClick(filter) {
+    let { dataList } = this.state;
+    let condition = (item) => item.tags.includes(filter);
+
+    this.setState({
+      displayList: filter !== 'none' ? dataList.filter(condition) : dataList,
+      // currentFilter: filter
+    });
   }
 
   componentDidMount() {
@@ -117,13 +134,13 @@ class CardContainer extends Component {
   }
 
   render() {
-    const { dataList, isLoading } = this.state;
-    console.log(isLoading);
+    const { displayList, isLoading, filters } = this.state;
 
     return (
       <Container>
-        <Row className="no-gutters">
-          {dataList.map(item => (
+        <FilterBar filters={filters} onFilterClick={this.onFilterClick} />
+        <Row className="no-gutters my-5">
+          {displayList.map(item => (
             <Card
               key={item.id}
               imageSrc={item.src}
