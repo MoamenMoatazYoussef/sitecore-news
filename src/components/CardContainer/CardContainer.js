@@ -137,7 +137,7 @@ class CardContainer extends Component {
     const { displayList, isLoading, filters } = this.state;
 
     return (
-      <Container>
+      <Container className="CardContainer my-3">
         <FilterBar filters={filters} onFilterClick={this.onFilterClick} />
         <Row className="no-gutters my-5">
           {displayList.map(item => (
