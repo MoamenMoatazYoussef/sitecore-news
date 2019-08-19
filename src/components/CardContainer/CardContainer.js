@@ -108,43 +108,45 @@ class CardContainer extends Component {
     super(props);
     this.state = {
       dataList: dummyDataList, //TODO: should be []
-      displayList: dummyDataList, //TODO: should be []
       filters: dummyFilters, //TODO: should be []
-      isLoading: false
-      // currentFilter: null      //TODO: probably will need this
+      isLoading: false,
+      currentFilter: () => true
     };
 
     this.onFilterClick = this.onFilterClick.bind(this);
     this.onLoadMoreClick = this.onLoadMoreClick.bind(this);
+
+    // this.filterDataList = this.filterDataList.bind(this);
   }
 
-  onFilterClick(filter) {
-    let { dataList } = this.state;
-    let condition = item => item.tags.includes(filter);
+  // filterDataList(dataList, filter) {
+  //   let condition = item => item.tags.includes(filter);
+  //   let newList = filter ? dataList.filter(condition) : dataList;
+  //   return newList;
+  // }
 
+  onFilterClick(filter) {
     this.setState({
-      displayList: filter !== "none" ? dataList.filter(condition) : dataList
-      // currentFilter: filter
+      currentFilter: filter
     });
   }
 
   async onLoadMoreClick() {
-    //TODO: fetch data here
+    
     this.setState({
       isLoading: true
     });
 
+    //TODO: fetch data here
     /**
      * The following code is a simulated fetch to demonstrate if the button Load More is working
      * This will be removed later and replaced with fetch API from Sitecore or a data source
      */
     let { dataList } = this.state;
-    let displayList = dataList.slice(0, this.state.displayList.length + 3);
-
+    dataList = [...dataList, ...dummyDataList.slice(dataList.length, dataList.length + 3)];
     function sleep(ms) {
       return new Promise(resolve => setTimeout(resolve, ms));
     }
-    
     await sleep(500); //This is here to simulate if button turns to LoadingButton when loading
     /**
      * End of simulation code
@@ -152,25 +154,25 @@ class CardContainer extends Component {
 
     this.setState({
       isLoading: false,
-      displayList
+      dataList
     });
   }
 
   componentDidMount() {
     this.setState({
       isLoading: false,
-      displayList: this.state.dataList.slice(0, 3)
+      dataList: dummyDataList.slice(0, 3)
     });
   }
 
   render() {
-    const { displayList, isLoading, filters } = this.state;
+    const { dataList, isLoading, filters, currentFilter } = this.state;
 
     return (
       <Container className="CardContainer my-3">
         <FilterBar filters={filters} onFilterClick={this.onFilterClick} />
         <Row className="no-gutters my-5">
-          {displayList.map(item => (
+          {dataList.filter(currentFilter).map(item => (
             <Card
               key={item.id}
               imageSrc={item.src}

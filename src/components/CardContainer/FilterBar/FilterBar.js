@@ -6,7 +6,7 @@ const FilterBar = ({ filters, onFilterClick }) => (
     <div className="order-lg-2">
       <span
         className="filter-selector font-weight-bold px-1"
-        onClick={() => onFilterClick("none")}
+        onClick={() => onFilterClick(() => {return true; })}
       >
         SHOW ALL
       </span>
@@ -15,7 +15,7 @@ const FilterBar = ({ filters, onFilterClick }) => (
       {filters.map(filter => (
         <span
           className="filter-selector font-weight-bold px-1"
-          onClick={() => onFilterClick(filter)}
+          onClick={() => onFilterClick(item => item.tags.includes(filter))}
         >
           {filter.toUpperCase()}
         </span>
