@@ -16,8 +16,28 @@
   padding: inherit;
 }
 
-.custom-dropdown {
+.custom-dropdown-menu {
+  color: #333333;
+  transition: all .3s;
+  text-transform: uppercase;
+}
 
+.custom-dropdown-menu:hover {
+  color: lightgray; 
+  text-decoration: none;
+}
+
+.custom-dropdown-menu-item {
+  display: block;
+  background-color: #333333;
+  color: white;
+  transition: all 0.3s;
+  text-transform: uppercase;
+}
+
+.custom-dropdown-menu-item:hover {
+  color: lightgray;
+  text-decoration: none;
 }
 
 .custom-dropdown::title {
@@ -33,3 +53,9 @@
 .white-background {
   background-color: white;
 }
+
+
+/* TODO: I'm not sure of this... */
+/* .dropdown-toggle::after {
+    display:none;
+} */

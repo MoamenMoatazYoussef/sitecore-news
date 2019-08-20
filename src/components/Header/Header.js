@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Navbar, Nav, NavDropdown, Dropdown } from "react-bootstrap";
+import { Container, Navbar, Nav, NavDropdown } from "react-bootstrap";
 import "./Header.css";
 
 import SearchModal from "./SearchModal/SearchModal";
@@ -22,10 +22,23 @@ const Header = ({ dropdownLists }) => (
           className="justify-content-left align-items-stretch"
         >
           {dropdownLists.map(dropdownList => (
-            <NavDropdown title={dropdownList.title} className="custom-dropdown d-flex align-items-center">
+            <NavDropdown
+              bsPrefix="custom-dropdown-menu"
+              title={dropdownList.title}
+              className="d-flex align-items-center mx-2"
+            >
+              {/* <div className="custom-dropdown-menu"> */}
                 {dropdownList.itemList.map(item => (
-                  <NavDropdown.Item href={item.link}>{item.title}</NavDropdown.Item>
+                  <NavDropdown.Item
+                    bsPrefix="custom-dropdown-menu-item"
+                    href={item.link}
+                    className="font-weight-bold"
+                  >
+                    {/* bsPrefix="custom-dropdown"  */}
+                    {item.title}
+                  </NavDropdown.Item>
                 ))}
+              {/* </div> */}
             </NavDropdown>
           ))}
         </Navbar.Collapse>
