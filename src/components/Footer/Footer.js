@@ -1,5 +1,11 @@
 // © 2019 ITWorx All rights reserved  | Privacy Policy
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebookF,
+  faLinkedinIn,
+  faTwitter
+} from "@fortawesome/free-brands-svg-icons";
 import { Container, Row, Col } from "react-bootstrap";
 import "./Footer.css";
 
@@ -8,7 +14,7 @@ const Footer = () => (
     <Container>
       <Row>
         <Col lg={6}>
-          <div className="d-flex justify-content-lg-start">
+          <div className="d-flex justify-content-lg-start justify-content-center py-lg-0 py-3">
             <span className="text-white small-text">
               © 2019 ITWorx All rights reserved |{" "}
               <a className="small-text custom-link" href="#">
@@ -18,12 +24,16 @@ const Footer = () => (
           </div>
         </Col>
         <Col lg={6}>
-          <div className="d-flex justify-content-lg-end">
-            <span>
-              <a className="custom-link small-text" href="#">F </a>
-              <a className="custom-link small-text" href="#">in </a>
-              <a className="custom-link small-text" href="#">twitter </a>
-            </span>
+          <div className="d-flex justify-content-lg-end justify-content-center py-lg-0 py-3">
+            <a className="custom-link small-text mx-3" href="#">
+              <FontAwesomeIcon icon={faFacebookF} />
+            </a>
+            <a className="custom-link small-text mx-3" href="#">
+              <FontAwesomeIcon icon={faTwitter} />
+            </a>
+            <a className="custom-link small-text mx-3" href="#">
+              <FontAwesomeIcon icon={faLinkedinIn} />
+            </a>
           </div>
         </Col>
       </Row>
