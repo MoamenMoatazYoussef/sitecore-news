@@ -1,10 +1,17 @@
-
 .search-button {
-    color: gray;
-    transition: all .3s;
-    /* font-size: 12px; */
+  color: gray;
+  transition: all 0.3s;
+  /* font-size: 12px; */
 }
 
 .search-button:hover {
-    color: lightgray;
+  color: lightgray;
+}
+
+.dropdown:hover > .dropdown-menu {
+  display: block;
+}
+
+.inherit-padding {
+  padding: inherit;
 }

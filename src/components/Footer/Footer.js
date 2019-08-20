@@ -17,7 +17,7 @@ const Footer = () => (
           <div className="d-flex justify-content-lg-start justify-content-center py-lg-0 py-3">
             <span className="text-white small-text">
               © 2019 ITWorx All rights reserved |{" "}
-              <a className="small-text custom-link" href="#">
+              <a className="small-text custom-link" href="#home">
                 Privacy Policy
               </a>
             </span>
@@ -25,13 +25,13 @@ const Footer = () => (
         </Col>
         <Col lg={6}>
           <div className="d-flex justify-content-lg-end justify-content-center py-lg-0 py-3">
-            <a className="custom-link small-text mx-3" href="#">
+            <a className="custom-link small-text mx-3" href="#home">
               <FontAwesomeIcon icon={faFacebookF} />
             </a>
-            <a className="custom-link small-text mx-3" href="#">
+            <a className="custom-link small-text mx-3" href="#home">
               <FontAwesomeIcon icon={faTwitter} />
             </a>
-            <a className="custom-link small-text mx-3" href="#">
+            <a className="custom-link small-text mx-3" href="#home">
               <FontAwesomeIcon icon={faLinkedinIn} />
             </a>
           </div>

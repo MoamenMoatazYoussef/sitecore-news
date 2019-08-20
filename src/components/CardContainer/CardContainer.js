@@ -13,14 +13,14 @@ const LoadButtonWithLoading = withLoading(LoadButton, LoadingButton);
 const dummyDataList = [
   {
     id: 0,
-    title: "Welcome to where time stands still",
+    title: "Lorem ipsum dolor sit amet",
     date: "May 29 2018",
     src: dummyPhoto,
     tags: ["News", "2018"]
   },
   {
     id: 1,
-    title: "No one leaves and no one will",
+    title: "Lorem ipsum dolor sit amet",
     date: "May 29 2018",
     src: dummyPhoto,
     tags: ["News", "2018"]
@@ -28,14 +28,14 @@ const dummyDataList = [
 
   {
     id: 3,
-    title: "Moon is full, never seems to change",
+    title: "Lorem ipsum dolor sit amet",
     date: "May 29 2018",
     src: dummyPhoto,
     tags: ["News", "2018", "Events"]
   },
   {
     id: 4,
-    title: "Just labeled mentally deranged",
+    title: "Lorem ipsum dolor sit amet",
     date: "May 29 2018",
     src: dummyPhoto,
     tags: ["News", "2018"]
@@ -43,14 +43,14 @@ const dummyDataList = [
 
   {
     id: 5,
-    title: "Dream the same thing every night",
+    title: "Lorem ipsum dolor sit amet",
     date: "May 29 2018",
     src: dummyPhoto,
     tags: ["News", "2018", "2019"]
   },
   {
     id: 6,
-    title: "I see our freedom in my sight",
+    title: "Lorem ipsum dolor sit amet",
     date: "May 29 2018",
     src: dummyPhoto,
     tags: ["News", "2018"]
@@ -58,14 +58,14 @@ const dummyDataList = [
 
   {
     id: 7,
-    title: "No locked doors, no windows barred",
+    title: "Lorem ipsum dolor sit amet",
     date: "May 29 2018",
     src: dummyPhoto,
     tags: ["News", "2018"]
   },
   {
     id: 8,
-    title: "No things to make my brain seem scarred",
+    title: "Lorem ipsum dolor sit amet",
     date: "May 29 2018",
     src: dummyPhoto,
     tags: ["News", "2018"]
@@ -73,14 +73,14 @@ const dummyDataList = [
 
   {
     id: 9,
-    title: "Sleep my friend and you will see",
+    title: "Lorem ipsum dolor sit amet",
     date: "May 29 2018",
     src: dummyPhoto,
     tags: ["News", "2018"]
   },
   {
     id: 10,
-    title: "The dream is my reality",
+    title: "Lorem ipsum dolor sit amet",
     date: "May 29 2018",
     src: dummyPhoto,
     tags: ["News", "2018"]
@@ -88,14 +88,14 @@ const dummyDataList = [
 
   {
     id: 11,
-    title: "They keep us locked up in this cage",
+    title: "Lorem ipsum dolor sit amet",
     date: "May 29 2018",
     src: dummyPhoto,
     tags: ["News", "2018"]
   },
   {
     id: 12,
-    title: "Can't they see this is why my brain says 'rage'",
+    title: "Lorem ipsum dolor sit amet",
     date: "May 29 2018",
     src: dummyPhoto,
     tags: ["News", "2018"]
@@ -103,14 +103,14 @@ const dummyDataList = [
 
   {
     id: 13,
-    title: "Build my fear of what's out there",
+    title: "Lorem ipsum dolor sit amet",
     date: "May 29 2018",
     src: dummyPhoto,
     tags: ["News", "2018"]
   },
   {
     id: 14,
-    title: "And cannot breath the open air",
+    title: "Lorem ipsum dolor sit amet",
     date: "May 29 2018",
     src: dummyPhoto,
     tags: ["News", "2018"]
@@ -118,14 +118,14 @@ const dummyDataList = [
 
   {
     id: 15,
-    title: "Whisper things into my brain",
+    title: "Lorem ipsum dolor sit amet",
     date: "May 29 2018",
     src: dummyPhoto,
     tags: ["News", "2018", "Events"]
   },
   {
     id: 16,
-    title: "Assuring me that I'm insane",
+    title: "Lorem ipsum dolor sit amet",
     date: "May 29 2018",
     src: dummyPhoto,
     tags: ["News", "2018"]
@@ -133,14 +133,14 @@ const dummyDataList = [
 
   {
     id: 17,
-    title: "They think our heads are in their hands",
+    title: "Lorem ipsum dolor sit amet",
     date: "May 29 2018",
     src: dummyPhoto,
     tags: ["News", "2018", "2019"]
   },
   {
     id: 18,
-    title: "But violent use brings violent plans",
+    title: "Lorem ipsum dolor sit amet",
     date: "May 29 2018",
     src: dummyPhoto,
     tags: ["News", "2018"]
@@ -148,14 +148,14 @@ const dummyDataList = [
 
   {
     id: 19,
-    title: "'Keep him tied, it makes him well'",
+    title: "Lorem ipsum dolor sit amet",
     date: "May 29 2018",
     src: dummyPhoto,
     tags: ["News", "2018"]
   },
   {
     id: 20,
-    title: "'He's getting better, can't you tell?'",
+    title: "Lorem ipsum dolor sit amet",
     date: "May 29 2018",
     src: dummyPhoto,
     tags: ["News", "2018"]
@@ -163,14 +163,14 @@ const dummyDataList = [
 
   {
     id: 21,
-    title: "No more can they keep us in",
+    title: "Lorem ipsum dolor sit amet",
     date: "May 29 2018",
     src: dummyPhoto,
     tags: ["News", "2018"]
   },
   {
     id: 22,
-    title: "Listen, Damn it! We will win",
+    title: "Lorem ipsum dolor sit amet",
     date: "May 29 2018",
     src: dummyPhoto,
     tags: ["News", "2018"]
@@ -178,14 +178,14 @@ const dummyDataList = [
 
   {
     id: 23,
-    title: "They see it right, they see it well",
+    title: "Lorem ipsum dolor sit amet",
     date: "May 29 2018",
     src: dummyPhoto,
     tags: ["News", "2018"]
   },
   {
     id: 24,
-    title: "But they think this saves us from our hell",
+    title: "Lorem ipsum dolor sit amet",
     date: "May 29 2018",
     src: dummyPhoto,
     tags: ["News", "2018"]
