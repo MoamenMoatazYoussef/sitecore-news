@@ -1,3 +1,36 @@
-.transparent {
-    background-color: rgba(0,0,0,.0001);
+.partial-transparent {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.full-transparent {
+  background-color: rgba(0, 0, 0, 0.7);
+  /* opacity: 1; */
+}
+
+.inherit-background {
+  background-color: inherit;
+}
+
+.custom-form-div {
+  border: 1px solid gray;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.custom-form-div:focus {
+  border: 1px solid #cc0000;
+}
+
+.custom-form {
+  border: 0;
+}
+
+.custom-form::placeholder {
+  color: white;
+  opacity: 1;
+  font-size: 130%;
+}
+
+.large-text {
+  font-size: 150%;
 }

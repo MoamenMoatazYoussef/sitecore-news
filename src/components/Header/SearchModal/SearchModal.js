@@ -18,17 +18,22 @@ function SearchModal() {
         <FontAwesomeIcon icon={faSearch} className="font-weight-light" />
       </a>
 
-      <Modal show={show} onHide={handleClose} centered className="transparent" >
-        {/* <Modal.Header closeButton>
-        </Modal.Header> */}
-        <Modal.Body className="transparent">
-          <Form.Group className="transparent d-flex justify-content-stretch align-item-stretch">
-            <Form.Control type="text" placeholder="Search..." className="w-100 d-inline"/>
-            <Button variant="primary" type="submit">
-              <FontAwesomeIcon icon={faSearch} className="font-weight-light" />
-            </Button>
-          </Form.Group>
-        </Modal.Body>
+      <Modal
+        show={show}
+        onHide={handleClose}
+        centered
+        className="full-transparent"
+      >
+        <div className="full-transparent d-flex justify-content-stretch align-item-stretch custom-form-div">
+          <input
+            type="text"
+            placeholder="Search..."
+            className="custom-form w-100 d-inline full-transparent text-white large-text px-4 py-4"
+          />
+          <button type="submit" className="full-transparent custom-form text-white px-4 py-4">
+            <FontAwesomeIcon icon={faSearch} className="font-weight-light" />
+          </button>
+        </div>
       </Modal>
     </div>
   );
