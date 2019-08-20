@@ -1,0 +1,9 @@
+.custom-dropdown-link {
+    color: gray;
+    transition: all .5s;
+}
+
+.custom-dropdown-link:hover {
+    color: lightgray;
+    text-decoration: none;
+}
