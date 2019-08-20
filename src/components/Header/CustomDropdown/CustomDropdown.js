@@ -20,12 +20,14 @@ class CustomDropdown extends Component {
   }
 
   render() {
-    const { children } = this.props;
+    const { children, className } = this.props;
+    const finalClassName = `${className} mx-1 custom-dropdown-link`;
+    
     return (
-      <div className="mx-1">
+      <div >
         <a
           href="#home"
-          className="custom-dropdown-link"
+          className="mx-2 custom-dropdown-link font-weight-bold"
           onMouseOver={this.handleClick}
         >
           {children}

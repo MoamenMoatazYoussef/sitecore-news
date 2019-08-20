@@ -4,9 +4,8 @@ import "./Header.css";
 
 import CustomDropDown from "./CustomDropdown/CustomDropdown";
 import CustomMenu from "./CustomDropdown/CustomMenu";
+import SearchModal from './SearchModal/SearchModal';
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import SvgItworxLogo from "../../icons/ItworxLogo.js";
 
 const Header = ({ dropdownLists }) => (
@@ -16,7 +15,7 @@ const Header = ({ dropdownLists }) => (
         expand="lg"
         className="justify-content-between align-items-stretch"
       >
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="#home" className="text-left">
           <SvgItworxLogo width="60%" />
         </Navbar.Brand>
         {/* TODO: What are these? */}
@@ -30,7 +29,7 @@ const Header = ({ dropdownLists }) => (
               <Dropdown.Toggle
                 as={CustomDropDown}
                 id={dropdownList.id}
-                className="align-middle"
+                className="font-weight-bold"
               >
                 {dropdownList.title}
               </Dropdown.Toggle>
@@ -45,9 +44,11 @@ const Header = ({ dropdownLists }) => (
             </Dropdown>
           ))}
         </Navbar.Collapse>
-        <a href="#home" className="search-button d-flex align-items-center">
+        {/* <a className="search-button d-flex align-items-center" href="#home">
           <FontAwesomeIcon icon={faSearch} className="font-weight-light" />
-        </a>
+        </a> */}
+
+        <SearchModal />
       </Navbar>
     </Container>
   </div>
