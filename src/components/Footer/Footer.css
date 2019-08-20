@@ -1,0 +1,17 @@
+.black-background {
+    background-color: black;
+}
+
+.small-text {
+    font-size: 14px;
+}
+
+.custom-link {
+    color: white;
+    transition: all .3s;
+}
+
+.custom-link:hover {
+    color: #cc0000;
+    text-decoration-line: none;
+}
