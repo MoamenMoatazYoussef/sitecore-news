@@ -1,0 +1,10 @@
+
+.search-button {
+    color: gray;
+    transition: all .3s;
+    /* font-size: 12px; */
+}
+
+.search-button:hover {
+    color: lightgray;
+}
