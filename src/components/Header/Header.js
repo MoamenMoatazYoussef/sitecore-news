@@ -1,15 +1,13 @@
 import React from "react";
-import { Container, Navbar, Dropdown } from "react-bootstrap";
+import { Container, Navbar, Nav, NavDropdown, Dropdown } from "react-bootstrap";
 import "./Header.css";
 
-import CustomDropDown from "./CustomDropdown/CustomDropdown";
-import CustomMenu from "./CustomDropdown/CustomMenu";
-import SearchModal from './SearchModal/SearchModal';
+import SearchModal from "./SearchModal/SearchModal";
 
 import SvgItworxLogo from "../../icons/ItworxLogo.js";
 
 const Header = ({ dropdownLists }) => (
-  <div>
+  <div className="w-100 fixed-top zindex-fixed white-background">
     <Container className="">
       <Navbar
         expand="lg"
@@ -18,35 +16,20 @@ const Header = ({ dropdownLists }) => (
         <Navbar.Brand href="#home" className="text-left">
           <SvgItworxLogo width="60%" />
         </Navbar.Brand>
-        {/* TODO: What are these? */}
         <Navbar.Toggle aria-controls="basic-navbar-nav" />{" "}
         <Navbar.Collapse
           id="basic-navbar-nav"
           className="justify-content-left align-items-stretch"
         >
           {dropdownLists.map(dropdownList => (
-            <Dropdown className="d-flex align-items-center">
-              <Dropdown.Toggle
-                as={CustomDropDown}
-                id={dropdownList.id}
-                className="font-weight-bold"
-              >
-                {dropdownList.title}
-              </Dropdown.Toggle>
-
-              <Dropdown.Menu as={CustomMenu}>
+            <NavDropdown title={dropdownList.title} className="custom-dropdown d-flex align-items-center">
                 {dropdownList.itemList.map(item => (
-                  <Dropdown.Item eventKey="1" href={item.link}>
-                    {item.title}
-                  </Dropdown.Item>
+                  <NavDropdown.Item href={item.link}>{item.title}</NavDropdown.Item>
                 ))}
-              </Dropdown.Menu>
-            </Dropdown>
+            </NavDropdown>
           ))}
         </Navbar.Collapse>
-
         <SearchModal />
-
       </Navbar>
     </Container>
   </div>

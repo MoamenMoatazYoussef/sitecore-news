@@ -15,3 +15,21 @@
 .inherit-padding {
   padding: inherit;
 }
+
+.custom-dropdown {
+
+}
+
+.custom-dropdown::title {
+  color: gray;
+  transition: all 0.3s;
+}
+
+.custom-dropdown::title:hover {
+  color: lightgray;
+  text-decoration: none;
+}
+
+.white-background {
+  background-color: white;
+}
