@@ -5,8 +5,8 @@ import "./Card.css";
 const Card = (
   { imageSrc, date, title, tags } //TODO: tags should be links to apply filters, maybe onClick
 ) => (
-  <Col xm={12} md={6} lg={4} className="no-gutters">
-    <div className="Card shadow-sm my-2 mx-2">
+  <Col xm={12} md={6} lg={4} className="no-gutters h-100">
+    <div className="Card shadow-sm my-2 mx-2 h-100">
       <div className="img-wrapper w-100">
         <div className="w-100 position-relative">
           <img className="img-holder w-100" src={imageSrc} alt={title} />
