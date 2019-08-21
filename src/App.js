@@ -56,9 +56,11 @@ const dropdownLists = [
 ];
 
 function App() {
-  return (
-    <div className="App">
-      <Header dropdownLists={dropdownLists} /> <CardContainer />
+  return ( // TODO: there must be a better way than this..
+    <div className="App d-flex flex-column justify-content-between mt-5 pt-5">
+      {/* <div className="header-background" style={{minHeight: '60px'}}/> */}
+      <Header dropdownLists={dropdownLists} className="" /> 
+      <CardContainer />
       <Footer />
     </div>
   );

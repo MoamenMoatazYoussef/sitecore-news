@@ -1,9 +1,8 @@
 import React from "react";
-import { Container, Navbar, Nav, NavDropdown } from "react-bootstrap";
+import { Container, Navbar, NavDropdown } from "react-bootstrap";
 import "./Header.css";
 
 import SearchModal from "./SearchModal/SearchModal";
-
 import SvgItworxLogo from "../../icons/ItworxLogo.js";
 
 const Header = ({ dropdownLists }) => (
@@ -32,7 +31,7 @@ const Header = ({ dropdownLists }) => (
                   <NavDropdown.Item
                     bsPrefix="custom-dropdown-menu-item"
                     href={item.link}
-                    className="font-weight-bold"
+                    className="font-weight-bold pl-3 py-2"
                   >
                     {/* bsPrefix="custom-dropdown"  */}
                     {item.title}
